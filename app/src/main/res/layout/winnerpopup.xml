@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="30dp"
+    android:paddingTop="150dp"
+    android:paddingLeft="30dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="100px"
+            android:id="@+id/winnercongrats"
+            android:gravity="center"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/winnercongrats"
+            android:gravity="center"
+            android:textSize="90px"
+            android:id="@+id/theword"
+            android:layout_marginTop="40dp"/>
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/theword"
+            android:layout_marginTop="200dp"
+            android:layout_centerHorizontal="true">
+            <Button
+                android:layout_marginLeft="25dp"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="play again!"
+                android:textSize="50px"
+                android:id="@+id/playagainb"/>
+            <Button
+                android:id="@+id/homeb"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="exit home"
+                android:textSize="50px"/>
+        </LinearLayout>
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="see tries"
+            android:layout_below="@+id/buttons"
+            android:layout_centerHorizontal="true"
+            android:textSize="50px"
+            android:id="@+id/dismissb"/>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "546342967827",
+    "project_id": "guessitusers",
+    "storage_bucket": "guessitusers.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:546342967827:android:e1d83207b193e555987de6",
+        "android_client_info": {
+          "package_name": "com.example.guessit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNXvdaOURJbJaERUYTHquYq3zv9puP8YM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
