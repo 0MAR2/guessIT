@@ -12,7 +12,7 @@
         <TextView
             android:id="@+id/loginreg"
             android:text="REGISTER"
-            android:textSize="150px"
+            android:textSize="57sp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="100dp"
             android:layout_width="wrap_content"
@@ -23,7 +23,7 @@
             android:layout_below="@+id/loginreg"
             android:id="@+id/regmail"
             android:hint="email"
-            android:textSize="70px"
+            android:textSize="26.6sp"
             android:layout_centerHorizontal="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -33,7 +33,7 @@
             android:layout_below="@+id/regmail"
             android:id="@+id/regpass"
             android:hint="password"
-            android:textSize="70px"
+            android:textSize="26.6sp"
             android:layout_centerHorizontal="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -41,7 +41,7 @@
             android:id="@+id/haveacc"
             android:layout_below="@id/regbtn"
             android:text="already have an account?"
-            android:textSize="50px"
+            android:textSize="19sp"
             android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -52,7 +52,7 @@
             android:layout_below="@id/regpass"
             android:layout_marginTop="100dp"
             android:text="register"
-            android:textSize="50px"
+            android:textSize="19sp"
             android:layout_centerHorizontal="true"/>
     </RelativeLayout>
 

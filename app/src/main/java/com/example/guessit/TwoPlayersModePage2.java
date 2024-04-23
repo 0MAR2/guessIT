@@ -29,6 +29,7 @@ public class TwoPlayersModePage2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String word=wordinput.getText().toString();
+                word=word.toLowerCase();
                 if (word.length()==5){
                     Intent intent=new Intent(TwoPlayersModePage2.this,TwoPlayersModePage3.class);
                     intent.putExtra("word",word);

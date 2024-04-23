@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:id="@+id/welcoming"
-            android:textSize="100px"/>
+            android:textSize="38sp"/>
         <TextView
             android:layout_marginTop="30dp"
             android:layout_below="@id/welcoming"
@@ -25,7 +25,7 @@
             android:id="@+id/description"
             android:padding="20dp"
             android:text="It's your time to guess!"
-            android:textSize="70px"/>
+            android:textSize="26.6sp"/>
         <TextView
             android:layout_marginTop="0dp"
             android:layout_below="@id/description"
@@ -38,7 +38,7 @@
             android:paddingRight="15dp"
             android:paddingBottom="15dp"
             android:text="you have x tries left"
-            android:textSize="40px"/>
+            android:textSize="15.2sp"/>
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -55,26 +55,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/input"
+                android:gravity="center"
                 android:layout_centerHorizontal="true">
             <TextView
                 android:gravity="center"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:textSize="100px"
+                android:textSize="38sp"
                 android:id="@+id/case11"
                 android:background="@drawable/border_background"/>
             <TextView
                 android:id="@+id/case12"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:textSize="100px"
+                android:textSize="38sp"
                 android:gravity="center"
                 android:background="@drawable/border_background"/>
             <TextView
                 android:id="@+id/case13"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:textSize="100px"
+                android:textSize="38sp"
                 android:gravity="center"
                 android:background="@drawable/border_background"
                 />
@@ -82,14 +83,14 @@
                 android:id="@+id/case14"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:textSize="100px"
+                android:textSize="38sp"
                 android:gravity="center"
                 android:background="@drawable/border_background"/>
             <TextView
                 android:id="@+id/case15"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:textSize="100px"
+                android:textSize="38sp"
                 android:gravity="center"
                 android:background="@drawable/border_background"/>
         </LinearLayout>
@@ -99,12 +100,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/line1"
+            android:gravity="center"
             android:layout_centerHorizontal="true">
             <TextView
 
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:textSize="100px"
+                android:textSize="38sp"
                 android:gravity="center"
                 android:id="@+id/case21"
                 android:background="@drawable/border_background"/>
@@ -112,14 +114,14 @@
                 android:id="@+id/case22"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:textSize="100px"
+                android:textSize="38sp"
                 android:gravity="center"
                 android:background="@drawable/border_background"/>
             <TextView
                 android:id="@+id/case23"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:textSize="100px"
+                android:textSize="38sp"
                 android:gravity="center"
                 android:background="@drawable/border_background"
                 />
@@ -127,14 +129,14 @@
                 android:id="@+id/case24"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:textSize="100px"
+                android:textSize="38sp"
                 android:gravity="center"
                 android:background="@drawable/border_background"/>
             <TextView
                 android:id="@+id/case25"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:textSize="100px"
+                android:textSize="38sp"
                 android:gravity="center"
                 android:background="@drawable/border_background"/>
         </LinearLayout>
@@ -144,12 +146,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/line2"
+            android:gravity="center"
             android:layout_centerHorizontal="true">
             <TextView
 
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:textSize="100px"
+                android:textSize="38sp"
                 android:gravity="center"
                 android:id="@+id/case31"
                 android:background="@drawable/border_background"/>
@@ -157,14 +160,14 @@
                 android:id="@+id/case32"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:textSize="100px"
+                android:textSize="38sp"
                 android:gravity="center"
                 android:background="@drawable/border_background"/>
             <TextView
                 android:id="@+id/case33"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:textSize="100px"
+                android:textSize="38sp"
                 android:gravity="center"
                 android:background="@drawable/border_background"
                 />
@@ -172,14 +175,14 @@
                 android:id="@+id/case34"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:textSize="100px"
+                android:textSize="38sp"
                 android:gravity="center"
                 android:background="@drawable/border_background"/>
             <TextView
                 android:id="@+id/case35"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:textSize="100px"
+                android:textSize="38sp"
                 android:gravity="center"
                 android:background="@drawable/border_background"/>
         </LinearLayout>
@@ -189,12 +192,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/line3"
+            android:gravity="center"
             android:layout_centerHorizontal="true">
             <TextView
 
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:textSize="100px"
+                android:textSize="38sp"
                 android:gravity="center"
                 android:id="@+id/case41"
                 android:background="@drawable/border_background"/>
@@ -202,14 +206,14 @@
                 android:id="@+id/case42"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:textSize="100px"
+                android:textSize="38sp"
                 android:gravity="center"
                 android:background="@drawable/border_background"/>
             <TextView
                 android:id="@+id/case43"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:textSize="100px"
+                android:textSize="38sp"
                 android:gravity="center"
                 android:background="@drawable/border_background"
                 />
@@ -217,14 +221,14 @@
                 android:id="@+id/case44"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:textSize="100px"
+                android:textSize="38sp"
                 android:gravity="center"
                 android:background="@drawable/border_background"/>
             <TextView
                 android:id="@+id/case45"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:textSize="100px"
+                android:textSize="38sp"
                 android:gravity="center"
                 android:background="@drawable/border_background"/>
         </LinearLayout>
@@ -234,12 +238,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/line4"
+            android:gravity="center"
             android:layout_centerHorizontal="true">
             <TextView
 
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:textSize="100px"
+                android:textSize="38sp"
                 android:gravity="center"
                 android:id="@+id/case51"
                 android:background="@drawable/border_background"/>
@@ -247,14 +252,14 @@
                 android:id="@+id/case52"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:textSize="100px"
+                android:textSize="38sp"
                 android:gravity="center"
                 android:background="@drawable/border_background"/>
             <TextView
                 android:id="@+id/case53"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:textSize="100px"
+                android:textSize="38sp"
                 android:gravity="center"
                 android:background="@drawable/border_background"
                 />
@@ -262,7 +267,7 @@
                 android:id="@+id/case54"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:textSize="100px"
+                android:textSize="38sp"
                 android:gravity="center"
                 android:background="@drawable/border_background"/>
 
@@ -273,7 +278,7 @@
                 android:background="@drawable/border_background"
                 android:gravity="center"
 
-                android:textSize="100px" />
+                android:textSize="38sp" />
         </LinearLayout>
         <Button
             android:layout_width="wrap_content"
@@ -282,7 +287,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:text="submit"
-            android:textSize="50px"
+            android:textSize="19sp"
             android:id="@+id/submit"/>
         <Button
             android:id="@+id/home"
@@ -290,8 +295,8 @@
             android:layout_height="wrap_content"
             android:padding="0px"
             android:text="home"
-            android:textSize="50px"
-            android:layout_marginTop="0px"
+            android:textSize="19sp"
+            android:layout_marginTop="0dp"
             app:cornerRadius="0px" />
 
     </RelativeLayout>

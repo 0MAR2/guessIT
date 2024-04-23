@@ -8,11 +8,16 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        >
+            >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bg1"
+            android:scaleType="centerCrop" />
         <TextView
             android:id="@+id/logintxt"
             android:text="LOGIN"
-            android:textSize="150px"
+            android:textSize="75sp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="100dp"
             android:layout_width="wrap_content"
@@ -23,7 +28,7 @@
             android:layout_below="@+id/logintxt"
             android:id="@+id/mail"
             android:hint="email"
-            android:textSize="70px"
+            android:textSize="26.6sp"
             android:layout_centerHorizontal="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -33,7 +38,7 @@
             android:layout_below="@+id/mail"
             android:id="@+id/loginpass"
             android:hint="password"
-            android:textSize="70px"
+            android:textSize="26.6sp"
             android:layout_centerHorizontal="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -44,13 +49,13 @@
             android:layout_below="@id/loginpass"
             android:layout_marginTop="100dp"
             android:text="login"
-            android:textSize="50px"
+            android:textSize="19sp"
             android:layout_centerHorizontal="true"/>
         <TextView
             android:id="@+id/newhere"
             android:layout_below="@id/loginbtn"
             android:text="register now?"
-            android:textSize="50px"
+            android:textSize="19sp"
             android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>

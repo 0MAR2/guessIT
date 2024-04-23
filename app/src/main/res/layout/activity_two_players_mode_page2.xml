@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:id="@+id/welcoming"
-            android:textSize="100px"/>
+            android:textSize="38sp"/>
         <TextView
             android:layout_marginTop="30dp"
             android:layout_below="@id/welcoming"
@@ -24,9 +24,9 @@
             android:layout_centerHorizontal="true"
             android:id="@+id/description"
             android:padding="20dp"
-            android:textSize="70px"/>
+            android:textSize="26.6sp"/>
         <EditText
-            android:textSize="100px"
+            android:textSize="38sp"
             android:hint="give a 5 letters word"
             android:layout_marginTop="50dp"
             android:layout_width="match_parent"
@@ -42,16 +42,16 @@
             android:layout_below="@id/wordinput"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"
-            android:textSize="50px"/>
+            android:textSize="19sp"/>
         <Button
             android:id="@+id/home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="0px"
+            android:padding="0dp"
             android:text="home"
-            android:textSize="50px"
-            android:layout_marginTop="0px"
-            app:cornerRadius="0px" />
+            android:textSize="19sp"
+            android:layout_marginTop="0dp"
+            app:cornerRadius="0dp" />
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

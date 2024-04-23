@@ -49,6 +49,7 @@ public class TwoPlayersModePage3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String wordtry=Try.getText().toString();
+                wordtry=wordtry.toLowerCase();
                 if (rowcount<6) {
                     int colcount = 0;
                     if (wordtry.length() == 5) {
@@ -64,7 +65,8 @@ public class TwoPlayersModePage3 extends AppCompatActivity {
                                 TextView caseToChange = findViewById(resourceId);
                                 char a = wordtry.charAt(colcount - 1);
                                 caseToChange.setText(String.valueOf(a));
-                                caseToChange.setTextColor(Color.GREEN);
+                                caseToChange.setTextColor(Color.WHITE);
+                                caseToChange.setBackground(getResources().getDrawable(R.drawable.greencase));
                                 char chararray[] = test.toCharArray();
                                 chararray[colcount - 1] = '#';
                                 String nstr = new String(chararray);
@@ -82,7 +84,8 @@ public class TwoPlayersModePage3 extends AppCompatActivity {
                                 if (test.indexOf(wordtry.charAt(colcount - 1)) != -1) {
                                     char a = wordtry.charAt(colcount - 1);
                                     caseToChange.setText(String.valueOf(a));
-                                    caseToChange.setTextColor(Color.YELLOW);
+                                    caseToChange.setTextColor(Color.WHITE);
+                                    caseToChange.setBackground(getResources().getDrawable(R.drawable.yellowcase));
                                     char chararray[] = test.toCharArray();
                                     chararray[test.indexOf(wordtry.charAt(colcount - 1))] = '#';
                                     String nstr = new String(chararray);
@@ -90,7 +93,8 @@ public class TwoPlayersModePage3 extends AppCompatActivity {
                                 } else {
                                     char a = wordtry.charAt(colcount - 1);
                                     caseToChange.setText(String.valueOf(a));
-                                    caseToChange.setTextColor(Color.RED);
+                                    caseToChange.setTextColor(Color.WHITE);
+                                    caseToChange.setBackground(getResources().getDrawable(R.drawable.red));
                                 }
                             }
 
