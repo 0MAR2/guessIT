@@ -30,12 +30,19 @@ public class TwoPlayersModePage2 extends AppCompatActivity {
             public void onClick(View v) {
                 String word=wordinput.getText().toString();
                 word=word.toLowerCase();
+                String pattern = "^[a-z]+$";
                 if (word.length()==5){
-                    Intent intent=new Intent(TwoPlayersModePage2.this,TwoPlayersModePage3.class);
-                    intent.putExtra("word",word);
-                    intent.putExtra("p1name",name);
-                    intent.putExtra("p2name",name2);
-                    startActivity(intent);
+                    if (word.matches(pattern)) {
+                        Intent intent=new Intent(TwoPlayersModePage2.this,TwoPlayersModePage3.class);
+                        intent.putExtra("word",word);
+                        intent.putExtra("p1name",name);
+                        intent.putExtra("p2name",name2);
+                        startActivity(intent);
+                        finish();
+                    }
+                    else{
+                        Toast.makeText(TwoPlayersModePage2.this, "The word can't contains special characters, spaces, or numbers.", Toast.LENGTH_SHORT).show();
+                    }
                 }
                 else{
                     Toast.makeText(TwoPlayersModePage2.this, "Please enter a 5 letters word", Toast.LENGTH_SHORT).show();
@@ -47,6 +54,7 @@ public class TwoPlayersModePage2 extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(TwoPlayersModePage2.this, MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

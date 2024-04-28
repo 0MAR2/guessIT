@@ -8,13 +8,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/border_background"
-
         >
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/bg8"
+            android:src="@drawable/bg7"
             android:scaleType="centerCrop" />
         <TextView
             android:layout_marginTop="60dp"
@@ -23,7 +22,7 @@
             android:layout_centerHorizontal="true"
             android:textSize="30sp"
             android:id="@+id/cong"
-            android:text="CONGRATULATIONS"
+            android:text="NICE TRY"
             android:gravity="center"
 
             />

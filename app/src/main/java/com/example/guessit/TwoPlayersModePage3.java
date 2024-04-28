@@ -43,6 +43,7 @@ public class TwoPlayersModePage3 extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(TwoPlayersModePage3.this, MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         submit.setOnClickListener(new View.OnClickListener() {
@@ -50,58 +51,63 @@ public class TwoPlayersModePage3 extends AppCompatActivity {
             public void onClick(View v) {
                 String wordtry=Try.getText().toString();
                 wordtry=wordtry.toLowerCase();
+                String pattern = "^[a-z]+$";
                 if (rowcount<6) {
                     int colcount = 0;
                     if (wordtry.length() == 5) {
-                        rowcount = rowcount + 1;
-                        nbtriesleft=nbtriesleft-1;
-                        triesleft.setText("You have "+nbtriesleft+" tries left!");
-                        String test = word;
-                        do{
-                            colcount++;
-                            if ((test.charAt(colcount - 1)) == (wordtry.charAt(colcount - 1))) {
+                        if (wordtry.matches(pattern)) {
+                            rowcount = rowcount + 1;
+                            nbtriesleft=nbtriesleft-1;
+                            triesleft.setText("You have "+nbtriesleft+" tries left!");
+                            String test = word;
+                            do{
+                                colcount++;
+                                if ((test.charAt(colcount - 1)) == (wordtry.charAt(colcount - 1))) {
+                                    String caseID = "case" + String.valueOf(rowcount) + String.valueOf(colcount);
+                                    int resourceId = getResources().getIdentifier(caseID, "id", getPackageName());
+                                    TextView caseToChange = findViewById(resourceId);
+                                    char a = wordtry.charAt(colcount - 1);
+                                    caseToChange.setText(String.valueOf(a));
+                                    caseToChange.setTextColor(Color.WHITE);
+                                    caseToChange.setBackground(getResources().getDrawable(R.drawable.greencase));
+                                    char chararray[] = test.toCharArray();
+                                    chararray[colcount - 1] = '#';
+                                    String nstr = new String(chararray);
+                                    test = nstr;
+                                }
+
+                            }while (colcount < 5);
+                            colcount = 0;
+                            do {
+                                colcount++;
                                 String caseID = "case" + String.valueOf(rowcount) + String.valueOf(colcount);
                                 int resourceId = getResources().getIdentifier(caseID, "id", getPackageName());
                                 TextView caseToChange = findViewById(resourceId);
-                                char a = wordtry.charAt(colcount - 1);
-                                caseToChange.setText(String.valueOf(a));
-                                caseToChange.setTextColor(Color.WHITE);
-                                caseToChange.setBackground(getResources().getDrawable(R.drawable.greencase));
-                                char chararray[] = test.toCharArray();
-                                chararray[colcount - 1] = '#';
-                                String nstr = new String(chararray);
-                                test = nstr;
-                            }
-
-                        }while (colcount < 5);
-                        colcount = 0;
-                        do {
-                            colcount++;
-                            String caseID = "case" + String.valueOf(rowcount) + String.valueOf(colcount);
-                            int resourceId = getResources().getIdentifier(caseID, "id", getPackageName());
-                            TextView caseToChange = findViewById(resourceId);
-                            if (caseToChange.getText().length()!=1){
-                                if (test.indexOf(wordtry.charAt(colcount - 1)) != -1) {
-                                    char a = wordtry.charAt(colcount - 1);
-                                    caseToChange.setText(String.valueOf(a));
-                                    caseToChange.setTextColor(Color.WHITE);
-                                    caseToChange.setBackground(getResources().getDrawable(R.drawable.yellowcase));
-                                    char chararray[] = test.toCharArray();
-                                    chararray[test.indexOf(wordtry.charAt(colcount - 1))] = '#';
-                                    String nstr = new String(chararray);
-                                    test = nstr;
-                                } else {
-                                    char a = wordtry.charAt(colcount - 1);
-                                    caseToChange.setText(String.valueOf(a));
-                                    caseToChange.setTextColor(Color.WHITE);
-                                    caseToChange.setBackground(getResources().getDrawable(R.drawable.red));
+                                if (caseToChange.getText().length()!=1){
+                                    if (test.indexOf(wordtry.charAt(colcount - 1)) != -1) {
+                                        char a = wordtry.charAt(colcount - 1);
+                                        caseToChange.setText(String.valueOf(a));
+                                        caseToChange.setTextColor(Color.WHITE);
+                                        caseToChange.setBackground(getResources().getDrawable(R.drawable.yellowcase));
+                                        char chararray[] = test.toCharArray();
+                                        chararray[test.indexOf(wordtry.charAt(colcount - 1))] = '#';
+                                        String nstr = new String(chararray);
+                                        test = nstr;
+                                    } else {
+                                        char a = wordtry.charAt(colcount - 1);
+                                        caseToChange.setText(String.valueOf(a));
+                                        caseToChange.setTextColor(Color.WHITE);
+                                        caseToChange.setBackground(getResources().getDrawable(R.drawable.red));
+                                    }
                                 }
-                            }
 
-                            Try.setText("");
-                            Try.requestFocus();
+                                Try.setText("");
+                                Try.requestFocus();
 
-                        } while (colcount < 5);
+                            } while (colcount < 5);}
+                        else{
+                            Toast.makeText(TwoPlayersModePage3.this, "The word can't contains special characters, spaces, or numbers.", Toast.LENGTH_SHORT).show();
+                        }
                     } else {
                         Toast.makeText(TwoPlayersModePage3.this, "Only 5 letters words are accepted", Toast.LENGTH_SHORT).show();
                     }
@@ -118,7 +124,7 @@ public class TwoPlayersModePage3 extends AppCompatActivity {
                         Button exit=popupView.findViewById(R.id.homeb);
                         Try.setEnabled(false);
                         submit.setEnabled(false);
-                        congrats.setText("Congratulation "+name2+"!");
+                        congrats.setText(name2+"!");
                         theword.setText("You've guessed "+name+"'s word:"+word);
                         exit.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -142,14 +148,46 @@ public class TwoPlayersModePage3 extends AppCompatActivity {
                                 popupWindow.dismiss();
                             }
                         });
+                    }else if (rowcount==5){
+                        LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                        View popupView = inflater.inflate(R.layout.loserpopup, null);
+                        PopupWindow popupWindow = new PopupWindow(popupView, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+                        popupWindow.setFocusable(true);
+                        popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
+                        TextView congrats=popupView.findViewById(R.id.winnercongrats);
+                        TextView theword=popupView.findViewById(R.id.theword);
+                        Button playagian=popupView.findViewById(R.id.playagainb);
+                        Button seetries=popupView.findViewById(R.id.dismissb);
+                        Button exit=popupView.findViewById(R.id.homeb);
+                        Try.setEnabled(false);
+                        submit.setEnabled(false);
+                        congrats.setText(name2+"!");
+                        theword.setText(name+"'s word was: "+word);
+                        exit.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent intent = new Intent(TwoPlayersModePage3.this, MainActivity.class);
+                                startActivity(intent);
+                                finish();
+                            }
+                        });
+                        playagian.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent intent = new Intent(TwoPlayersModePage3.this, TwoPlayersModePage2.class);
+                                intent.putExtra("p1name",name);
+                                intent.putExtra("p2name",name2);
+                                startActivity(intent);
+                                finish();
+                            }
+                        });
+                        seetries.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                popupWindow.dismiss();
+                            }
+                        });
                     }
-                }else {
-                    LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                    View popupView = inflater.inflate(R.layout.winnerpopup, null);
-                    PopupWindow popupWindow = new PopupWindow(popupView, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-                    popupWindow.setFocusable(true);
-                    popupWindow.setOutsideTouchable(true);
-                    popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
                 }
 
             }

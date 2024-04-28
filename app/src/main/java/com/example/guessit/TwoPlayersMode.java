@@ -41,6 +41,7 @@ public class TwoPlayersMode extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(TwoPlayersMode.this, MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

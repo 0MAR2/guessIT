@@ -9,29 +9,37 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bg2"
+            android:scaleType="centerCrop" />
         <TextView
             android:id="@+id/welcome"
             android:text="Welcome"
-            android:textSize="57sp"
+            android:textSize="60sp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="100dp"
+            android:textColor="#FF8100"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/explain"
             android:layout_below="@+id/welcome"
             android:text="input the players name"
-            android:textSize="38sp"
+            android:textSize="40sp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="100dp"
+            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <EditText
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="60dp"
             android:layout_below="@+id/explain"
             android:id="@+id/p1name"
             android:hint="player1 name"
-            android:textSize="38sp"
+            android:textSize="30sp"
+            android:inputType="text"
             android:layout_centerHorizontal="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -40,7 +48,8 @@
             android:layout_below="@+id/p1name"
             android:id="@+id/p2name"
             android:hint="player2 name"
-            android:textSize="38sp"
+            android:inputType="text"
+            android:textSize="30sp"
             android:layout_centerHorizontal="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -53,7 +62,6 @@
             android:text="submit"
             android:textSize="19sp"
             android:layout_centerHorizontal="true"/>
-
         <Button
             android:id="@+id/home"
             android:layout_width="wrap_content"

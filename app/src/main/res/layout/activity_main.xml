@@ -9,36 +9,45 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <TextView
-            android:layout_marginTop="100dp"
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bg1"
+            android:scaleType="centerCrop" />
+        <ImageView
+            android:layout_marginTop="60dp"
             android:layout_centerHorizontal="true"
             android:id="@+id/GuessIt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="GuessIt"
+            android:src="@drawable/logo6"
             android:textSize="57sp"
             tools:layout_editor_absoluteX="108dp"
             tools:layout_editor_absoluteY="138dp" />
 
         <Button
-            android:layout_marginTop="250dp"
+            android:textSize="20sp"
+            android:layout_marginTop="200dp"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/GuessIt"
             android:id="@+id/b1"
             android:layout_width="180dp"
+            android:padding="10dp"
             android:layout_height="wrap_content"
-            android:text="Single Player mode"
+            android:text="Single Player"
             tools:layout_editor_absoluteX="115dp"
             tools:layout_editor_absoluteY="423dp" />
 
         <Button
+            android:textSize="20sp"
+            android:padding="10dp"
             android:layout_marginTop="20dp"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/b1"
             android:id="@+id/b2"
             android:layout_width="180dp"
             android:layout_height="wrap_content"
-            android:text="two players mode"
+            android:text="Two players"
             tools:layout_editor_absoluteX="115dp"
             tools:layout_editor_absoluteY="500dp" />
     </RelativeLayout>

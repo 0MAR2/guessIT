@@ -9,6 +9,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bg3"
+            android:scaleType="centerCrop" />
         <TextView
             android:layout_marginTop="100dp"
             android:layout_width="wrap_content"
@@ -26,13 +31,15 @@
             android:padding="20dp"
             android:textSize="26.6sp"/>
         <EditText
-            android:textSize="38sp"
+            android:maxLength="5"
+            android:textSize="30sp"
             android:hint="give a 5 letters word"
             android:layout_marginTop="50dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/description"
+            android:inputType="text"
             android:id="@+id/wordinput"/>
         <Button
             android:layout_width="wrap_content"
@@ -41,7 +48,7 @@
             android:id="@+id/submit"
             android:layout_below="@id/wordinput"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="70dp"
             android:textSize="19sp"/>
         <Button
             android:id="@+id/home"

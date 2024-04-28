@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.GuessIt">
+        <!-- Specify custom font family -->
+        <item name="android:fontFamily">@font/aoa1</item>
+    </style>
+
+</resources>
