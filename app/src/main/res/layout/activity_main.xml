@@ -15,16 +15,21 @@
             android:src="@drawable/bg1"
             android:scaleType="centerCrop" />
         <ImageView
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="69dp"
             android:layout_centerHorizontal="true"
             android:id="@+id/GuessIt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/logo6"
+            android:src="@drawable/logo7"
             android:textSize="57sp"
             tools:layout_editor_absoluteX="108dp"
             tools:layout_editor_absoluteY="138dp" />
-
+        <Button
+            app:cornerRadius="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="logout"
+            android:id="@+id/logout"/>
         <Button
             android:textSize="20sp"
             android:layout_marginTop="200dp"

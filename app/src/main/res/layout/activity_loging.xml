@@ -23,21 +23,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <EditText
+            android:inputType="text"
             android:gravity="center"
             android:layout_marginTop="150dp"
             android:layout_below="@+id/logintxt"
             android:id="@+id/mail"
-            android:hint="email"
+            android:hint="Email"
             android:textSize="26.6sp"
             android:layout_centerHorizontal="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <EditText
+            android:inputType="text"
             android:gravity="center"
             android:layout_marginTop="30dp"
             android:layout_below="@+id/mail"
             android:id="@+id/loginpass"
-            android:hint="password"
+            android:hint="Password"
             android:textSize="26.6sp"
             android:layout_centerHorizontal="true"
             android:layout_width="match_parent"

@@ -2,7 +2,7 @@
 <resources>
     <style name="AppTheme" parent="Theme.GuessIt">
         <!-- Specify custom font family -->
-        <item name="android:fontFamily">@font/aoa1</item>
+        <item name="android:fontFamily">@font/aa</item>
     </style>
 
 </resources>
