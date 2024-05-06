@@ -50,9 +50,6 @@ public class SinglePlayerMode extends AppCompatActivity {
         Button submit=findViewById(R.id.submit);
         EditText Try=findViewById(R.id.input);
         Random random = new Random();
-        /*int randomNumber = random.nextInt(7) ;
-        String[] words = {"apple", "grape", "melon", "peach","Adult","Agent","Fight"};
-        word=words[randomNumber];*/
         int randomNumber = random.nextInt(663) + 1;
         String id = String.valueOf(randomNumber);
         readData(id, new DataCallback() {
@@ -225,11 +222,9 @@ public class SinglePlayerMode extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     DataSnapshot dataSnapshot = task.getResult();
                     String word = String.valueOf(dataSnapshot.getValue());
-                    callback.onDataLoaded(word); // Callback with the retrieved word
+                    callback.onDataLoaded(word);
                 } else {
-                    // Handle the case where the word was not found or there was an error
-                    System.out.println("Error retrieving word: " + task.getException());
-                    callback.onDataLoaded(null); // Callback with null to indicate failure
+                    callback.onDataLoaded(null);
                 }
             }
         });
